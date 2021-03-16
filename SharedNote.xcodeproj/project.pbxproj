@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		26EC291742D51C2385F442DE /* Pods_SharedNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FEADCE8F8972C5A613F36F /* Pods_SharedNote.framework */; };
 		E203EDDC2600670C00482C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E203EDDB2600670C00482C56 /* AppDelegate.swift */; };
+		E25800452600774800665F45 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25800442600774800665F45 /* Note.swift */; };
+		E258004826007AFD00665F45 /* notes.json in Resources */ = {isa = PBXBuildFile; fileRef = E258004726007AFD00665F45 /* notes.json */; };
+		E258004B26007F1600665F45 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258004A26007F1600665F45 /* NotesView.swift */; };
 		E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C7F7F26006467001196E7 /* SharedNoteApp.swift */; };
 		E29C7F8226006467001196E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C7F8126006467001196E7 /* ContentView.swift */; };
 		E29C7F8426006467001196E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8326006467001196E7 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		53FEADCE8F8972C5A613F36F /* Pods_SharedNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8C09603819BDC059D28B04 /* Pods-SharedNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedNote.debug.xcconfig"; path = "Target Support Files/Pods-SharedNote/Pods-SharedNote.debug.xcconfig"; sourceTree = "<group>"; };
 		E203EDDB2600670C00482C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E25800442600774800665F45 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E258004726007AFD00665F45 /* notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notes.json; sourceTree = "<group>"; };
+		E258004A26007F1600665F45 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		E29C7F7C26006467001196E7 /* SharedNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29C7F7F26006467001196E7 /* SharedNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedNoteApp.swift; sourceTree = "<group>"; };
 		E29C7F8126006467001196E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,11 +87,14 @@
 			isa = PBXGroup;
 			children = (
 				E29C7F7F26006467001196E7 /* SharedNoteApp.swift */,
+				E258004A26007F1600665F45 /* NotesView.swift */,
 				E203EDDB2600670C00482C56 /* AppDelegate.swift */,
 				E29C7F8126006467001196E7 /* ContentView.swift */,
+				E25800442600774800665F45 /* Note.swift */,
 				E29C7F8326006467001196E7 /* Assets.xcassets */,
 				E29C7F8826006467001196E7 /* Info.plist */,
 				E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */,
+				E258004726007AFD00665F45 /* notes.json */,
 				E29C7F8526006467001196E7 /* Preview Content */,
 			);
 			path = SharedNote;
@@ -161,6 +170,7 @@
 				E29C7F8726006467001196E7 /* Preview Assets.xcassets in Resources */,
 				E29C7F8426006467001196E7 /* Assets.xcassets in Resources */,
 				E29C7F902600649C001196E7 /* GoogleService-Info.plist in Resources */,
+				E258004826007AFD00665F45 /* notes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +225,9 @@
 			files = (
 				E203EDDC2600670C00482C56 /* AppDelegate.swift in Sources */,
 				E29C7F8226006467001196E7 /* ContentView.swift in Sources */,
+				E258004B26007F1600665F45 /* NotesView.swift in Sources */,
 				E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */,
+				E25800452600774800665F45 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

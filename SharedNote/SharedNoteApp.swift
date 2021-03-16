@@ -5,6 +5,7 @@
 //  Created by Doug Wright on 3/15/21.
 //
 
+import FirebaseDatabase
 import SwiftUI
 
 @main
@@ -13,7 +14,23 @@ struct SharedNoteApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                NavigationView {
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "pencil")
+                    Text("New")
+                }
+
+                NavigationView {
+                    NotesView()
+                }
+                .tabItem {
+                    Image(systemName: "lineweight")
+                    Text("Notes")
+                }
+            }
         }
     }
 }
