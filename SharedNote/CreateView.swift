@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct CreateView: View {
-    @State private var note: String = "Make a note..."
+    @State private var note: String = ""
+
+    func saveNote() {
+        // save to firebase
+        // redirect to notes page
+        print($note)
+    }
+
     var body: some View {
-        TextEditor(text: $note)
-            .font(.custom("HelveticaNeue", size: 18))
+        VStack(spacing: 10) {
+            HStack() {
+                Text("write a note")
+                    .font(.largeTitle)
+                Image(systemName: "pencil")
+                    .imageScale(.large)
+            }
+
+            TextField("bla bla bla...", text: $note)
+                .disableAutocorrection(true)
+                .frame(height: 300)
+                .padding()
+
+            Button(action: saveNote) {
+                Text("Save Note")
+                Image(systemName: "square.and.arrow.down")
+            }
             .padding()
+        }
     }
 }
 
