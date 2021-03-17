@@ -16,7 +16,7 @@ struct SharedNoteApp: App {
         WindowGroup {
             TabView {
                 NavigationView {
-                    ContentView()
+                    CreateView()
                 }
                 .tabItem {
                     Image(systemName: "pencil")

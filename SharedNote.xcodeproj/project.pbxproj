@@ -13,7 +13,7 @@
 		E258004826007AFD00665F45 /* notes.json in Resources */ = {isa = PBXBuildFile; fileRef = E258004726007AFD00665F45 /* notes.json */; };
 		E258004B26007F1600665F45 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258004A26007F1600665F45 /* NotesView.swift */; };
 		E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C7F7F26006467001196E7 /* SharedNoteApp.swift */; };
-		E29C7F8226006467001196E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C7F8126006467001196E7 /* ContentView.swift */; };
+		E29C7F8226006467001196E7 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C7F8126006467001196E7 /* CreateView.swift */; };
 		E29C7F8426006467001196E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8326006467001196E7 /* Assets.xcassets */; };
 		E29C7F8726006467001196E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8626006467001196E7 /* Preview Assets.xcassets */; };
 		E29C7F902600649C001196E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */; };
@@ -28,7 +28,7 @@
 		E258004A26007F1600665F45 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		E29C7F7C26006467001196E7 /* SharedNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29C7F7F26006467001196E7 /* SharedNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedNoteApp.swift; sourceTree = "<group>"; };
-		E29C7F8126006467001196E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E29C7F8126006467001196E7 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		E29C7F8326006467001196E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E29C7F8626006467001196E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E29C7F8826006467001196E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				E29C7F7F26006467001196E7 /* SharedNoteApp.swift */,
 				E258004A26007F1600665F45 /* NotesView.swift */,
 				E203EDDB2600670C00482C56 /* AppDelegate.swift */,
-				E29C7F8126006467001196E7 /* ContentView.swift */,
+				E29C7F8126006467001196E7 /* CreateView.swift */,
 				E25800442600774800665F45 /* Note.swift */,
 				E29C7F8326006467001196E7 /* Assets.xcassets */,
 				E29C7F8826006467001196E7 /* Info.plist */,
@@ -224,7 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E203EDDC2600670C00482C56 /* AppDelegate.swift in Sources */,
-				E29C7F8226006467001196E7 /* ContentView.swift in Sources */,
+				E29C7F8226006467001196E7 /* CreateView.swift in Sources */,
 				E258004B26007F1600665F45 /* NotesView.swift in Sources */,
 				E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */,
 				E25800452600774800665F45 /* Note.swift in Sources */,
