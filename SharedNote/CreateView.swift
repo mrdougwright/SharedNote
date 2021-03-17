@@ -11,8 +11,6 @@ struct CreateView: View {
     @State private var note: String = ""
 
     func saveNote() {
-        // save to firebase
-        // redirect to notes page
         print($note)
     }
 

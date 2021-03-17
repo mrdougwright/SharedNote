@@ -15,6 +15,7 @@ struct NotesView: View {
         let url = Bundle.main.url(forResource: "notes", withExtension: "json")!
 
         let data = try! Data(contentsOf: url)
+        Notes()
         notes = try! JSONDecoder().decode([Note].self, from: data)
     }
 

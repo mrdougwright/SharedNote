@@ -17,6 +17,7 @@
 		E29C7F8426006467001196E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8326006467001196E7 /* Assets.xcassets */; };
 		E29C7F8726006467001196E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8626006467001196E7 /* Preview Assets.xcassets */; };
 		E29C7F902600649C001196E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */; };
+		E2DEEF502601BCD7001935BD /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEEF4F2601BCD7001935BD /* Notes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E29C7F8626006467001196E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E29C7F8826006467001196E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2DEEF4F2601BCD7001935BD /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Notes.swift; path = /Users/doug.wright/Documents/code/iOS/SharedNote/SharedNote/Notes.swift; sourceTree = "<absolute>"; };
 		F9BDD9943E3A74FE34EC12BA /* Pods-SharedNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedNote.release.xcconfig"; path = "Target Support Files/Pods-SharedNote/Pods-SharedNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,10 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				E29C7F7F26006467001196E7 /* SharedNoteApp.swift */,
-				E258004A26007F1600665F45 /* NotesView.swift */,
 				E203EDDB2600670C00482C56 /* AppDelegate.swift */,
 				E29C7F8126006467001196E7 /* CreateView.swift */,
+				E258004A26007F1600665F45 /* NotesView.swift */,
 				E25800442600774800665F45 /* Note.swift */,
+				E2DEEF4F2601BCD7001935BD /* Notes.swift */,
 				E29C7F8326006467001196E7 /* Assets.xcassets */,
 				E29C7F8826006467001196E7 /* Info.plist */,
 				E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DEEF502601BCD7001935BD /* Notes.swift in Sources */,
 				E203EDDC2600670C00482C56 /* AppDelegate.swift in Sources */,
 				E29C7F8226006467001196E7 /* CreateView.swift in Sources */,
 				E258004B26007F1600665F45 /* NotesView.swift in Sources */,
