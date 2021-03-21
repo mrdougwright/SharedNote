@@ -29,6 +29,7 @@
 		E2589C9626077AB400648687 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		E2589C9C2607A8B500648687 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2589CA02607AA1F00648687 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
+		E2589CA52607B0B900648687 /* firebaseNotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = firebaseNotes.json; sourceTree = "<group>"; };
 		E29C7F7C26006467001196E7 /* SharedNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29C7F7F26006467001196E7 /* SharedNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedNoteApp.swift; sourceTree = "<group>"; };
 		E29C7F8326006467001196E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 			children = (
 				E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */,
 				E258004726007AFD00665F45 /* notes.json */,
+				E2589CA52607B0B900648687 /* firebaseNotes.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

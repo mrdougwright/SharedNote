@@ -1,0 +1,17 @@
+{
+    "id1": {
+        "author": "Doug",
+        "text": "from id 1",
+        "timestamp": "now"
+    },
+    "id2": {
+        "author": "Jane",
+        "text": "from id 2",
+        "timestamp": "then"
+    },
+    "id3": {
+        "author": "doug from code",
+        "text": "mwa haha",
+        "timestamp": "1-1-1"
+    }
+}

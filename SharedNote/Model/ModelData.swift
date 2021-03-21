@@ -13,7 +13,7 @@ final class ModelData: ObservableObject {
 }
 
 func load<T: Decodable>(_ key: String) -> T {
-//    var data: Data
+    var data: Any = []
     var ref: DatabaseReference!
 
     ref = Database.database().reference()
@@ -23,21 +23,17 @@ func load<T: Decodable>(_ key: String) -> T {
             print("Error getting data \(error)")
         }
         else if snapshot.exists() {
-            print("Got data \(snapshot.value!)")
-            print("Type: \(type(of: snapshot.value))")
-//            data = snapshot.value as! Data
+            let value = snapshot.value as? NSDictionary
+            let id1 = value?["id1"] as? NSDictionary ?? [:]
+
+            print("Got data => \(value)")
+            print("first: \(id1)")
+            data = value
         }
         else {
             print("No data available")
         }
     }
-
-//    do {
-//        let decoder = JSONDecoder()
-//        return try decoder.decode(T.self, from: data)
-//    } catch {
-//        fatalError("Flap")
-//    }
-    return [] as! T
+    return data as! T
 }
 
