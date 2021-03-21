@@ -20,12 +20,15 @@ class NotesViewModel: ObservableObject {
                 return
             }
             
+            print("docs: \(documents[0])")
+            
             self.notes = documents.map { queryDocumentSnapshot -> Note in
                 let data = queryDocumentSnapshot.data()
+                let id = queryDocumentSnapshot.documentID
                 let author = data["author"] as? String ?? ""
                 let text = data["text"] as? String ?? ""
                 
-                return Note(id: .init(), author: author, text: text)
+                return Note(id: id, author: author, text: text)
             }
         }
     }
