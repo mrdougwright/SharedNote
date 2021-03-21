@@ -1,13 +1,13 @@
 //
-//  CreateView.swift
+//  NewNoteView.swift
 //  SharedNote
 //
-//  Created by Doug Wright on 3/15/21.
+//  Created by Doug Wright on 3/21/21.
 //
 
 import SwiftUI
 
-struct CreateView: View {
+struct NewNoteView: View {
     @State private var note: String = ""
 
     func saveNote() {
@@ -37,8 +37,8 @@ struct CreateView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct NewNoteView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateView()
+        NewNoteView()
     }
 }

@@ -5,32 +5,21 @@
 //  Created by Doug Wright on 3/15/21.
 //
 
-import FirebaseDatabase
+import Firebase
 import SwiftUI
 
 @main
 struct SharedNoteApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var modelData = ModelData()
+
+    init() {
+        FirebaseApp.configure()
+    }
 
     var body: some Scene {
         WindowGroup {
-            TabView {
-                NavigationView {
-                    CreateView()
-                }
-                .tabItem {
-                    Image(systemName: "pencil")
-                    Text("New")
-                }
-
-                NavigationView {
-                    NotesView()
-                }
-                .tabItem {
-                    Image(systemName: "lineweight")
-                    Text("Notes")
-                }
-            }
+            ContentView()
+                .environmentObject(modelData)
         }
     }
 }
