@@ -10,8 +10,6 @@ import SwiftUI
 
 @main
 struct SharedNoteApp: App {
-    @StateObject private var modelData = ModelData()
-
     init() {
         FirebaseApp.configure()
     }
@@ -19,7 +17,6 @@ struct SharedNoteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(modelData)
         }
     }
 }

@@ -7,12 +7,14 @@
 
 import Foundation
 
-struct Note: Decodable {
-    let text: String
+struct Note: Identifiable {
+    let id: String
     let author: String
-    let timestamp: String
+    let text: String
+//    let timestamp: TimeInterval
 
-    static let examples = [
-        Note(text: "example note", author: "Doug Wright", timestamp: "right meow")
+    static let testData = [
+        Note(id: "1", author: "Doug Wright", text: "example note"),
+        Note(id: "2", author: "Jane Kim", text: "lets go to park")
     ]
 }

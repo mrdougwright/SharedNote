@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = NotesViewModel()
+
     var body: some View {
         TabView {
             NavigationView {
@@ -19,11 +21,14 @@ struct ContentView: View {
             }
 
             NavigationView {
-                NotesView()
+                NotesView(notes: viewModel.notes)
             }
             .tabItem {
                 Image(systemName: "lineweight")
                 Text("Notes")
+            }
+            .onAppear() {
+                self.viewModel.fetchData()
             }
         }
     }
@@ -32,6 +37,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ModelData())
     }
 }

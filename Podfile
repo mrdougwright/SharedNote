@@ -6,7 +6,6 @@ target 'SharedNote' do
   use_frameworks!
 
   # Pods for SharedNote
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-
+  pod 'Firebase/Firestore'
+  # pod 'FirebaseFirestoreSwift'
 end

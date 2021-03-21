@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct NotesView: View {
-    @EnvironmentObject var modelData: ModelData
+    let notes: [Note]
 
     var body: some View {
-        List(modelData.notes, id: \.text) { note in
-            Text(note.text)
+        List(notes) { note in
+            HStack() {
+                Text(note.text)
+                    .font(.headline)
+                Text(note.author)
+                    .font(.subheadline)
+            }
         }
     }
 }
 
 struct NotesView_Previews: PreviewProvider {
     static var previews: some View {
-        NotesView()
-            .environmentObject(ModelData())
+        NotesView(notes: Note.testData)
     }
 }

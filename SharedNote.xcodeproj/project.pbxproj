@@ -11,9 +11,9 @@
 		E25800452600774800665F45 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25800442600774800665F45 /* Note.swift */; };
 		E258004826007AFD00665F45 /* notes.json in Resources */ = {isa = PBXBuildFile; fileRef = E258004726007AFD00665F45 /* notes.json */; };
 		E258004B26007F1600665F45 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258004A26007F1600665F45 /* NotesView.swift */; };
-		E2589C9726077AB400648687 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2589C9626077AB400648687 /* ModelData.swift */; };
 		E2589C9D2607A8B500648687 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2589C9C2607A8B500648687 /* ContentView.swift */; };
 		E2589CA12607AA1F00648687 /* NewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2589CA02607AA1F00648687 /* NewNoteView.swift */; };
+		E258A5E52607F04A00B9523E /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258A5E42607F04A00B9523E /* NotesViewModel.swift */; };
 		E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C7F7F26006467001196E7 /* SharedNoteApp.swift */; };
 		E29C7F8426006467001196E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8326006467001196E7 /* Assets.xcassets */; };
 		E29C7F8726006467001196E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8626006467001196E7 /* Preview Assets.xcassets */; };
@@ -26,10 +26,10 @@
 		E25800442600774800665F45 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E258004726007AFD00665F45 /* notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notes.json; sourceTree = "<group>"; };
 		E258004A26007F1600665F45 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
-		E2589C9626077AB400648687 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		E2589C9C2607A8B500648687 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2589CA02607AA1F00648687 /* NewNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNoteView.swift; sourceTree = "<group>"; };
 		E2589CA52607B0B900648687 /* firebaseNotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = firebaseNotes.json; sourceTree = "<group>"; };
+		E258A5E42607F04A00B9523E /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		E29C7F7C26006467001196E7 /* SharedNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E29C7F7F26006467001196E7 /* SharedNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedNoteApp.swift; sourceTree = "<group>"; };
 		E29C7F8326006467001196E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,7 +71,6 @@
 		E2589C9526077AA300648687 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2589C9626077AB400648687 /* ModelData.swift */,
 				E25800442600774800665F45 /* Note.swift */,
 			);
 			path = Model;
@@ -95,6 +94,14 @@
 				E2589CA52607B0B900648687 /* firebaseNotes.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E258A5E32607F02C00B9523E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E258A5E42607F04A00B9523E /* NotesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E29C7F7326006467001196E7 = {
@@ -121,8 +128,9 @@
 				E29C7F8826006467001196E7 /* Info.plist */,
 				E2589C9B2607A87A00648687 /* Resources */,
 				E29C7F7F26006467001196E7 /* SharedNoteApp.swift */,
-				E2589C9A2607A85800648687 /* Views */,
 				E2589C9526077AA300648687 /* Model */,
+				E2589C9A2607A85800648687 /* Views */,
+				E258A5E32607F02C00B9523E /* ViewModel */,
 				E29C7F8326006467001196E7 /* Assets.xcassets */,
 				E29C7F8526006467001196E7 /* Preview Content */,
 			);
@@ -253,11 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E258004B26007F1600665F45 /* NotesView.swift in Sources */,
+				E258A5E52607F04A00B9523E /* NotesViewModel.swift in Sources */,
 				E2589C9D2607A8B500648687 /* ContentView.swift in Sources */,
 				E2589CA12607AA1F00648687 /* NewNoteView.swift in Sources */,
 				E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */,
 				E25800452600774800665F45 /* Note.swift in Sources */,
-				E2589C9726077AB400648687 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
