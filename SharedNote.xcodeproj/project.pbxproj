@@ -78,9 +78,9 @@
 		E2589C9A2607A85800648687 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2589C9C2607A8B500648687 /* ContentView.swift */,
 				E2589CA02607AA1F00648687 /* NewNoteView.swift */,
 				E258004A26007F1600665F45 /* NotesView.swift */,
-				E2589C9C2607A8B500648687 /* ContentView.swift */,
 				E2D16777260879CE0050DA46 /* LineView.swift */,
 			);
 			path = View;

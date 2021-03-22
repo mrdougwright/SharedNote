@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @State private var selectedTab = 0
+    @State private var tagNumber: Int = 0
     @ObservedObject var viewModel = NotesViewModel()
 
     var body: some View {
-        TabView {
+        TabView(selection: $tagNumber) {
             NavigationView {
                 NewNoteView()
             }
@@ -19,6 +21,14 @@ struct ContentView: View {
                 Image(systemName: "pencil")
                 Text("New")
             }
+            .tag(0)
+            .gesture(
+                DragGesture(minimumDistance: 50).onEnded { value in
+                    if value.translation.width < 0 {
+                        tagNumber = 1
+                    }
+                }
+            )
 
             NavigationView {
                 NotesView(notes: viewModel.notes)
@@ -27,6 +37,14 @@ struct ContentView: View {
                 Image(systemName: "lineweight")
                 Text("Notes")
             }
+            .tag(1)
+            .gesture(
+                DragGesture(minimumDistance: 50).onEnded { value in
+                    if value.translation.width > 0 {
+                        tagNumber = 0
+                    }
+                }
+            )
             .onAppear() {
                 self.viewModel.fetchData()
             }
