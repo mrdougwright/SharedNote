@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @State private var selectedTab = 0
     @State private var tagNumber: Int = 0
     @ObservedObject var viewModel = NotesViewModel()
 
