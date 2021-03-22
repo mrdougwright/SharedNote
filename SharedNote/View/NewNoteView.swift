@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct NewNoteView: View {
-    @State private var note: String = ""
-
+    var viewModel = NotesViewModel()
+    @State private var text: String = ""
+    
     func saveNote() {
-        print($note)
+        self.viewModel.saveNote(text: self.text)
+        self.text = ""
     }
-
+    
     var body: some View {
         VStack(spacing: 10) {
             HStack() {
@@ -23,7 +25,7 @@ struct NewNoteView: View {
                     .imageScale(.large)
             }
 
-            TextField("bla bla bla...", text: $note)
+            TextField("bla bla bla...", text: $text)
                 .disableAutocorrection(true)
                 .frame(height: 300)
                 .padding()
@@ -32,7 +34,11 @@ struct NewNoteView: View {
                 Text("Save Note")
                 Image(systemName: "square.and.arrow.down")
             }
-            .padding()
+            .padding(10)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .font(.headline)
+            .cornerRadius(20)
         }
     }
 }
