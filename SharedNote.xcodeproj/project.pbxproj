@@ -17,6 +17,7 @@
 		E29C7F8426006467001196E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8326006467001196E7 /* Assets.xcassets */; };
 		E29C7F8726006467001196E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8626006467001196E7 /* Preview Assets.xcassets */; };
 		E29C7F902600649C001196E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */; };
+		E2D16778260879CE0050DA46 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D16777260879CE0050DA46 /* LineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E29C7F8626006467001196E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E29C7F8826006467001196E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E29C7F8F2600649C001196E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E2D16777260879CE0050DA46 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		FE502C20CEB9C8362CB66FB0 /* Pods-SharedNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedNote.release.xcconfig"; path = "Target Support Files/Pods-SharedNote/Pods-SharedNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				E2589CA02607AA1F00648687 /* NewNoteView.swift */,
 				E258004A26007F1600665F45 /* NotesView.swift */,
 				E2589C9C2607A8B500648687 /* ContentView.swift */,
+				E2D16777260879CE0050DA46 /* LineView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				E2589C9D2607A8B500648687 /* ContentView.swift in Sources */,
 				E2589CA12607AA1F00648687 /* NewNoteView.swift in Sources */,
 				E29C7F8026006467001196E7 /* SharedNoteApp.swift in Sources */,
+				E2D16778260879CE0050DA46 /* LineView.swift in Sources */,
 				E25800452600774800665F45 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

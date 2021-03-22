@@ -18,12 +18,12 @@ struct NotesView: View {
     var body: some View {
         List(notes) { note in
             HStack() {
-                Text(note.text)
-                    .font(.body)
+                LineView(text: note.text)
                 Spacer()
 
                 Text(note.author)
                     .font(.subheadline)
+                    .opacity(0.5)
 
                 Button(action: { deleteNote(note.id) }) {
                     Image(systemName: "trash")
