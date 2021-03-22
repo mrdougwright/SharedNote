@@ -45,9 +45,20 @@ class NotesViewModel: ObservableObject {
         db.collection("notes").document(documentId).delete() { error in
             if let error = error {
                 print("Error removing document: \(error)")
-                
             } else {
                 print("Document successfully removed!")
+            }
+        }
+    }
+
+    func updateNote(documentId: String, text: String) {
+        db.collection("notes")
+            .document(documentId)
+            .updateData(["text": text, "created": NSDate().timeIntervalSince1970]) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Document successfully updated!")
             }
         }
     }

@@ -12,13 +12,13 @@ struct NotesView: View {
     let notes: [Note]
     
     func deleteNote(_ documentId: String) {
-        self.viewModel.deleteNote(documentId: documentId)
+        viewModel.deleteNote(documentId: documentId)
     }
 
     var body: some View {
         List(notes) { note in
             HStack() {
-                LineView(text: note.text)
+                LineView(id: note.id, text: note.text)
                 Spacer()
 
                 Text(note.author)
