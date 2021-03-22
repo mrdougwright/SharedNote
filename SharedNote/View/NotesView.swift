@@ -21,11 +21,14 @@ struct NotesView: View {
                 Text(note.text)
                     .font(.body)
                 Spacer()
+
                 Text(note.author)
                     .font(.subheadline)
+
                 Button(action: { deleteNote(note.id) }) {
                     Image(systemName: "trash")
                 }
+                .buttonStyle(BorderlessButtonStyle())
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             }
         }
