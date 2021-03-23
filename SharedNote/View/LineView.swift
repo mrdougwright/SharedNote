@@ -28,7 +28,7 @@ struct LineView: View {
             .onTapGesture {
                 toggleExpand()
             }
-            .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+            .animation(.easeIn)
     }
 
     func toggleExpand() {
@@ -52,6 +52,9 @@ struct EditView: View {
     
     func updateNote() {
         viewModel.updateNote(documentId: id, text: newText)
+    }
+    
+    func cancel() {
         presentationMode.wrappedValue.dismiss()
     }
     
@@ -61,16 +64,16 @@ struct EditView: View {
                 .padding()
 
             HStack {
-                Button(action: updateNote) {
-                    Text("Update")
-                    Image(systemName: "square.and.arrow.up")
+                Button(action: cancel) {
+                    Text("Cancel")
+                    Image(systemName: "pencil.slash")
                 }
                 .padding()
 
                 Spacer()
-
-                Button("cancel") {
-                    presentationMode.wrappedValue.dismiss()
+                Button(action: updateNote) {
+                    Text("Save")
+                    Image(systemName: "square.and.arrow.up")
                 }
                 .padding()
             }

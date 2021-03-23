@@ -11,7 +11,7 @@ struct Note: Identifiable {
     let id: String
     let author: String
     let text: String
-    let created: Float
+    let created: TimeInterval
 
     static let testData = [
         Note(id: "1", author: "Doug Wright", text: "example note", created: 1616374386.745393),

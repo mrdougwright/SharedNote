@@ -25,9 +25,12 @@ class NotesViewModel: ObservableObject {
                 let id = queryDocumentSnapshot.documentID
                 let author = data["author"] as? String ?? ""
                 let text = data["text"] as? String ?? ""
-                let created = data["created"] as? Float ?? 0.0
+                let created = data["created"] as? TimeInterval ?? 0.0
                 
                 return Note(id: id, author: author, text: text, created: created)
+            }
+            .sorted {
+                $0.created > $1.created
             }
         }
     }
