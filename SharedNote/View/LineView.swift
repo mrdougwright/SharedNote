@@ -10,7 +10,7 @@ import SwiftUI
 struct LineView: View {
     let id: String
     let text: String
-    var viewModel = NotesViewModel()
+
     @State private var expand: Bool = false
     @State private var lines: Int = 1
     @State private var showingSheet = false
@@ -19,16 +19,16 @@ struct LineView: View {
         Text(text)
             .font(.body)
             .lineLimit(lines)
+            .onTapGesture(count: 2) {
+                showingSheet.toggle()
+            }
+            .sheet(isPresented: $showingSheet) {
+                EditView(id: id, newText: text)
+            }
             .onTapGesture {
                 toggleExpand()
             }
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-            .onLongPressGesture {
-                showingSheet.toggle()
-            }
-            .sheet(isPresented: $showingSheet) {
-                EditView(newText: text)
-            }
     }
 
     func toggleExpand() {
@@ -41,19 +41,39 @@ struct LineView: View {
         }
     }
 
-    func updateNote() {
-        showingSheet.toggle()
-//        viewModel.updateNote(documentId: id, text: newText)
-    }
+    
 }
 
 struct EditView: View {
-    var newText: String
+    let id: String
+    @State var newText: String
     @Environment(\.presentationMode) var presentationMode
+    var viewModel = NotesViewModel()
+    
+    func updateNote() {
+        viewModel.updateNote(documentId: id, text: newText)
+        presentationMode.wrappedValue.dismiss()
+    }
     
     var body: some View {
-        Button("dismiss") {
-            presentationMode.wrappedValue.dismiss()
+        VStack {
+            TextEditor(text: $newText)
+                .padding()
+
+            HStack {
+                Button(action: updateNote) {
+                    Text("Update")
+                    Image(systemName: "square.and.arrow.up")
+                }
+                .padding()
+
+                Spacer()
+
+                Button("cancel") {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding()
+            }
         }
     }
 }
