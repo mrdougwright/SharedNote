@@ -22,12 +22,10 @@ struct NotesView: View {
 
                     VStack() {
                         Text(note.author)
-                            .frame(alignment: .trailing)
                             .font(.subheadline)
                             .opacity(0.3)
                         
                         Text(date)
-                            .frame(alignment: .trailing)
                             .font(.subheadline)
                             .opacity(0.5)
                     }
