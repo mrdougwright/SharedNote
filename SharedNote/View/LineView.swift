@@ -13,7 +13,7 @@ struct LineView: View {
     var viewModel = NotesViewModel()
     @State private var expand: Bool = false
     @State private var lines: Int = 1
-    @State private var newText: String
+    @State private var showingSheet = false
 
     var body: some View {
         Text(text)
@@ -23,8 +23,14 @@ struct LineView: View {
                 toggleExpand()
             }
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
+            .onLongPressGesture {
+                showingSheet.toggle()
+            }
+            .sheet(isPresented: $showingSheet) {
+                EditView(newText: text)
+            }
     }
-    
+
     func toggleExpand() {
         if expand {
             lines = 1000
@@ -34,9 +40,21 @@ struct LineView: View {
             expand = true
         }
     }
-    
+
     func updateNote() {
-        viewModel.updateNote(documentId: id, text: newText)
+        showingSheet.toggle()
+//        viewModel.updateNote(documentId: id, text: newText)
+    }
+}
+
+struct EditView: View {
+    var newText: String
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        Button("dismiss") {
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 

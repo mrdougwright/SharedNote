@@ -33,12 +33,8 @@ class NotesViewModel: ObservableObject {
     }
     
     func saveNote(text: String) {
-        let parsedNote = [
-            "author": UIDevice.current.name,
-            "text": text,
-            "created": NSDate().timeIntervalSince1970
-        ] as [String : Any]
-        db.collection("notes").addDocument(data: parsedNote)
+        let note = buildNote(text)
+        db.collection("notes").addDocument(data: note)
     }
 
     func deleteNote(documentId: String) {
@@ -52,14 +48,24 @@ class NotesViewModel: ObservableObject {
     }
 
     func updateNote(documentId: String, text: String) {
+        let note = buildNote(text)
+
         db.collection("notes")
             .document(documentId)
-            .updateData(["text": text, "created": NSDate().timeIntervalSince1970]) { error in
-            if let error = error {
-                print("Error updating document: \(error)")
-            } else {
-                print("Document successfully updated!")
+            .updateData(note) { error in
+                if let error = error {
+                    print("Error updating document: \(error)")
+                } else {
+                    print("Document successfully updated!")
             }
         }
+    }
+    
+    private func buildNote(_ text: String) -> [String: Any] {
+        return [
+            "author": UIDevice.current.name,
+            "text": text,
+            "created": NSDate().timeIntervalSince1970
+        ]
     }
 }
