@@ -31,6 +31,7 @@ struct ContentView: View {
 
             NavigationView {
                 NotesView(notes: viewModel.notes)
+                    .navigationTitle("Notes")
             }
             .tabItem {
                 Image(systemName: "lineweight")
