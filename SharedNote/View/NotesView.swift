@@ -11,26 +11,24 @@ struct NotesView: View {
     var viewModel = NotesViewModel()
     let notes: [Note]
     
-    func deleteNote(_ documentId: String) {
-        viewModel.deleteNote(documentId: documentId)
+    func deleteNote(at offsets: IndexSet) {
+        for index in offsets {
+            viewModel.deleteNote(documentId: notes[index].id)
+        }
     }
 
     var body: some View {
-        List(notes) { note in
-            HStack() {
-                LineView(id: note.id, text: note.text)
-                Spacer()
+        List {
+            ForEach(notes) { note in
+                HStack() {
+                    LineView(id: note.id, text: note.text)
+                    Spacer()
 
-                Text(note.author)
-                    .font(.subheadline)
-                    .opacity(0.5)
-
-                Button(action: { deleteNote(note.id) }) {
-                    Image(systemName: "trash")
+                    Text(note.author)
+                        .font(.subheadline)
+                        .opacity(0.5)
                 }
-                .buttonStyle(BorderlessButtonStyle())
-                .foregroundColor(.red)
-            }
+            }.onDelete(perform: deleteNote)
         }
     }
 }
